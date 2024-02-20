@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/SAVI%20MSI/Complete%20Data%20Science/kidney-disease-classification-deep-learning-project/mlruns/0/19d6672ba6b7484981779ab1342d6c19/artifacts
+end_time: 1708465813968
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 19d6672ba6b7484981779ab1342d6c19
+run_name: adventurous-stag-272
+run_uuid: 19d6672ba6b7484981779ab1342d6c19
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1708465806452
+status: 3
+tags: []
+user_id: Savi

@@ -1,0 +1,12 @@
+creation_timestamp: 1708466258958
+current_stage: None
+description: ''
+last_updated_timestamp: 1708466258958
+name: VGG16Model
+run_id: 19d6672ba6b7484981779ab1342d6c19
+run_link: ''
+source: file:///C:/SAVI%20MSI/Complete%20Data%20Science/kidney-disease-classification-deep-learning-project/mlruns/0/19d6672ba6b7484981779ab1342d6c19/artifacts/model
+status: READY
+status_message: null
+user_id: null
+version: 1
