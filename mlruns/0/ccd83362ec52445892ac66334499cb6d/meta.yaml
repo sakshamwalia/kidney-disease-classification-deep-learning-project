@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/SAVI%20MSI/Complete%20Data%20Science/kidney-disease-classification-deep-learning-project/mlruns/0/ccd83362ec52445892ac66334499cb6d/artifacts
+end_time: 1708629407339
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ccd83362ec52445892ac66334499cb6d
+run_name: bright-fish-55
+run_uuid: ccd83362ec52445892ac66334499cb6d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1708629397451
+status: 3
+tags: []
+user_id: Savi

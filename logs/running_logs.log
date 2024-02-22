@@ -398,3 +398,685 @@ x====================x]
 [2024-02-21 03:20:13,970 : INFO : main : >>>>>>>>>>>>>> Stage Evaluation Stage completed <<<<<<<<<<<
 
 x========================x]
+[2024-02-22 16:02:36,343 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-22 16:02:36,349 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 16:02:36,354 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 16:02:36,355 : INFO : common : created directory at : artifacts]
+[2024-02-22 16:02:36,356 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-22 16:02:36,357 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-22 16:06:50,143 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-22 16:06:57,574 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-22 16:06:57,575 : INFO : main : ******************]
+[2024-02-22 16:06:57,575 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-22 16:06:57,577 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 16:06:57,578 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 16:06:57,578 : INFO : common : created directory at : artifacts]
+[2024-02-22 16:06:57,578 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-22 16:06:57,998 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-22 16:06:58,220 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-22 16:06:58,220 : INFO : main : **********************]
+[2024-02-22 16:06:58,221 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-22 16:06:58,222 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 16:06:58,223 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 16:06:58,224 : INFO : common : created directory at : artifacts]
+[2024-02-22 16:06:58,224 : INFO : common : created directory at : artifacts/training]
+[2024-02-22 16:16:57,667 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-22 16:16:57,667 : INFO : main : ******************]
+[2024-02-22 16:16:57,667 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 16:16:57,671 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 16:16:57,671 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 16:16:57,671 : INFO : common : created directory at : artifacts]
+[2024-02-22 16:19:53,320 : ERROR : main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "main.py", line 44, in <module>
+    obj.main()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 58, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 131, in create_run
+    return self.store.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: ''
+[2024-02-22 16:21:47,720 : INFO : main : ******************]
+[2024-02-22 16:21:47,720 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 16:21:47,724 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 16:21:47,728 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 16:21:47,728 : INFO : common : created directory at : artifacts]
+[2024-02-22 16:24:50,142 : ERROR : main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "main.py", line 44, in <module>
+    obj.main()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 58, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 131, in create_run
+    return self.store.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: ''
+[2024-02-22 16:31:08,303 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 16:31:08,312 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 16:31:08,316 : INFO : common : created directory at : artifacts]
+[2024-02-22 16:34:18,376 : INFO : common : json file saved at : scores.json]
+[2024-02-22 16:40:10,902 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 16:40:10,907 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 16:40:10,911 : INFO : common : created directory at : artifacts]
+[2024-02-22 16:43:19,515 : INFO : common : json file saved at : scores.json]
+[2024-02-22 16:43:21,908 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-22 16:43:22,603 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmp0grboi37\model\data\model\assets]
+[2024-02-22 16:46:10,083 : INFO : main : ******************]
+[2024-02-22 16:46:10,083 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 16:46:10,083 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 16:46:10,087 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 16:46:10,087 : INFO : common : created directory at : artifacts]
+[2024-02-22 16:49:09,933 : INFO : common : json file saved at : scores.json]
+[2024-02-22 16:49:10,592 : ERROR : main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "main.py", line 44, in <module>
+    obj.main()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 58, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 131, in create_run
+    return self.store.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: ''
+[2024-02-22 17:05:49,242 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-22 17:05:49,244 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 17:05:49,245 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 17:05:49,246 : INFO : common : created directory at : artifacts]
+[2024-02-22 17:05:49,247 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-22 17:05:49,248 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-22 17:10:05,262 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-22 17:10:14,033 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-22 17:10:14,034 : INFO : main : ******************]
+[2024-02-22 17:10:14,035 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-22 17:10:14,038 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 17:10:14,040 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 17:10:14,041 : INFO : common : created directory at : artifacts]
+[2024-02-22 17:10:14,041 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-22 17:10:14,428 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-22 17:10:14,635 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-22 17:10:14,636 : INFO : main : **********************]
+[2024-02-22 17:10:14,636 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-22 17:10:14,637 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 17:10:14,639 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 17:10:14,640 : INFO : common : created directory at : artifacts]
+[2024-02-22 17:10:14,640 : INFO : common : created directory at : artifacts/training]
+[2024-02-22 17:18:01,943 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-22 17:18:01,944 : INFO : main : ******************]
+[2024-02-22 17:18:01,945 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 17:18:01,948 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 17:18:01,950 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 17:18:01,951 : INFO : common : created directory at : artifacts]
+[2024-02-22 17:20:19,901 : INFO : common : json file saved at : scores.json]
+[2024-02-22 17:21:22,237 : ERROR : main : API request to https://dagshub.com/sakshamwalia/kidney-disease-classification-deep-learning-project.mlflow/api/2.0/mlflow/runs/create failed with exception HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /sakshamwalia/kidney-disease-classification-deep-learning-project.mlflow/api/2.0/mlflow/runs/create (Caused by ResponseError('too many 502 error responses'))]
+urllib3.exceptions.ResponseError: too many 502 error responses
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 948, in urlopen
+    return self.urlopen(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 948, in urlopen
+    return self.urlopen(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 948, in urlopen
+    return self.urlopen(
+  [Previous line repeated 2 more times]
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 938, in urlopen
+    retries = retries.increment(method, url, response=response, _pool=self)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /sakshamwalia/kidney-disease-classification-deep-learning-project.mlflow/api/2.0/mlflow/runs/create (Caused by ResponseError('too many 502 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 167, in http_request
+    return _get_http_response_with_retries(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 98, in _get_http_response_with_retries
+    return session.request(method, url, **kwargs)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\requests\adapters.py", line 510, in send
+    raise RetryError(e, request=request)
+requests.exceptions.RetryError: HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /sakshamwalia/kidney-disease-classification-deep-learning-project.mlflow/api/2.0/mlflow/runs/create (Caused by ResponseError('too many 502 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 44, in <module>
+    obj.main()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 58, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 131, in create_run
+    return self.store.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 278, in call_endpoint
+    response = http_request(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 185, in http_request
+    raise MlflowException(f"API request to {url} failed with exception {e}")
+mlflow.exceptions.MlflowException: API request to https://dagshub.com/sakshamwalia/kidney-disease-classification-deep-learning-project.mlflow/api/2.0/mlflow/runs/create failed with exception HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /sakshamwalia/kidney-disease-classification-deep-learning-project.mlflow/api/2.0/mlflow/runs/create (Caused by ResponseError('too many 502 error responses'))
+[2024-02-22 17:23:20,993 : INFO : main : ******************]
+[2024-02-22 17:23:20,994 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 17:23:20,999 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 17:23:21,001 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 17:23:21,002 : INFO : common : created directory at : artifacts]
+[2024-02-22 17:25:35,050 : INFO : common : json file saved at : scores.json]
+[2024-02-22 17:25:35,685 : ERROR : main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "main.py", line 44, in <module>
+    obj.main()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 58, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 131, in create_run
+    return self.store.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: ''
+[2024-02-22 17:31:03,294 : INFO : main : ******************]
+[2024-02-22 17:31:03,294 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 17:31:03,297 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 17:31:03,298 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 17:31:03,298 : INFO : common : created directory at : artifacts]
+[2024-02-22 17:33:20,858 : INFO : common : json file saved at : scores.json]
+[2024-02-22 17:33:21,519 : ERROR : main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "main.py", line 44, in <module>
+    obj.main()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 58, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 131, in create_run
+    return self.store.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: ''
+[2024-02-22 17:54:06,426 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-22 17:54:06,428 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 17:54:06,429 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 17:54:06,429 : INFO : common : created directory at : artifacts]
+[2024-02-22 17:54:06,431 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-22 17:54:06,432 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-22 17:58:14,336 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-22 17:58:22,901 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-22 17:58:22,902 : INFO : main : ******************]
+[2024-02-22 17:58:22,902 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-22 17:58:22,904 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 17:58:22,906 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 17:58:22,906 : INFO : common : created directory at : artifacts]
+[2024-02-22 17:58:22,907 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-22 17:58:23,274 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-22 17:58:23,573 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-22 17:58:23,574 : INFO : main : **********************]
+[2024-02-22 17:58:23,575 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-22 17:58:23,577 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 17:58:23,578 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 17:58:23,579 : INFO : common : created directory at : artifacts]
+[2024-02-22 17:58:23,580 : INFO : common : created directory at : artifacts/training]
+[2024-02-22 18:06:16,085 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-22 18:39:41,699 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 18:39:41,704 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 18:39:41,707 : INFO : common : created directory at : artifacts]
+[2024-02-22 18:42:52,918 : INFO : common : json file saved at : scores.json]
+[2024-02-22 18:42:56,200 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-22 18:42:56,856 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmpnumr2agq\model\data\model\assets]
+[2024-02-22 18:48:34,283 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 18:48:34,299 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 18:48:34,302 : INFO : common : created directory at : artifacts]
+[2024-02-22 18:51:44,996 : INFO : common : json file saved at : scores.json]
+[2024-02-22 18:51:47,864 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-22 18:51:48,646 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmpw6p00g34\model\data\model\assets]
+[2024-02-22 18:54:06,775 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 18:54:06,790 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 18:54:06,793 : INFO : common : created directory at : artifacts]
+[2024-02-22 18:57:31,047 : INFO : common : json file saved at : scores.json]
+[2024-02-22 18:57:34,129 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-22 18:57:34,767 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmpg981j8pn\model\data\model\assets]
+[2024-02-22 19:06:55,206 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 19:06:55,210 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 19:06:55,214 : INFO : common : created directory at : artifacts]
+[2024-02-22 19:10:09,441 : INFO : common : json file saved at : scores.json]
+[2024-02-22 19:10:12,452 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-22 19:10:13,160 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmptl6qf8ky\model\data\model\assets]
+[2024-02-22 19:27:45,177 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-22 19:27:45,181 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 19:27:45,193 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 19:27:45,193 : INFO : common : created directory at : artifacts]
+[2024-02-22 19:27:45,193 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-22 19:27:45,197 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-22 19:31:52,546 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-22 19:32:08,859 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-22 19:32:08,859 : INFO : main : ******************]
+[2024-02-22 19:32:08,859 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-22 19:32:08,863 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 19:32:08,867 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 19:32:08,867 : INFO : common : created directory at : artifacts]
+[2024-02-22 19:32:08,867 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-22 19:32:09,438 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-22 19:32:09,786 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-22 19:32:09,786 : INFO : main : **********************]
+[2024-02-22 19:32:09,786 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-22 19:32:09,794 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 19:32:09,798 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 19:32:09,798 : INFO : common : created directory at : artifacts]
+[2024-02-22 19:32:09,802 : INFO : common : created directory at : artifacts/training]
+[2024-02-22 19:45:44,468 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-22 19:45:44,469 : INFO : main : ******************]
+[2024-02-22 19:45:44,469 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 19:45:44,472 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 19:45:44,474 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 19:45:44,475 : INFO : common : created directory at : artifacts]
+[2024-02-22 19:48:04,618 : INFO : common : json file saved at : scores.json]
+[2024-02-22 19:48:06,012 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-22 19:48:06,717 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmpze3wm9zc\model\data\model\assets]
+[2024-02-22 19:48:12,716 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\e99d95787dd6483c97b2a4e2db3830e1\artifacts\model\data]
+[2024-02-22 19:48:12,718 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\e99d95787dd6483c97b2a4e2db3830e1\artifacts\model\data\model]
+[2024-02-22 19:48:12,720 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\e99d95787dd6483c97b2a4e2db3830e1\artifacts\model\data\model\assets]
+[2024-02-22 19:48:12,724 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\e99d95787dd6483c97b2a4e2db3830e1\artifacts\model\data\model\variables]
+[2024-02-22 19:48:12,829 : INFO : main : >>>>>>>>>>>>>> Stage Evaluation Stage completed <<<<<<<<<<<
+
+x========================x]
+[2024-02-22 20:15:15,446 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-22 20:15:15,450 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 20:15:15,457 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 20:15:15,458 : INFO : common : created directory at : artifacts]
+[2024-02-22 20:15:15,458 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-22 20:15:15,460 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-22 20:19:38,382 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-22 20:19:47,042 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-22 20:19:47,042 : INFO : main : ******************]
+[2024-02-22 20:19:47,043 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-22 20:19:47,045 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 20:19:47,046 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 20:19:47,046 : INFO : common : created directory at : artifacts]
+[2024-02-22 20:19:47,047 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-22 20:19:47,397 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-22 20:19:47,703 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-22 20:19:47,704 : INFO : main : **********************]
+[2024-02-22 20:19:47,704 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-22 20:19:47,706 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 20:19:47,708 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 20:19:47,708 : INFO : common : created directory at : artifacts]
+[2024-02-22 20:19:47,709 : INFO : common : created directory at : artifacts/training]
+[2024-02-22 20:35:31,473 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-22 20:35:31,474 : INFO : main : ******************]
+[2024-02-22 20:35:31,474 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 20:35:31,477 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 20:35:31,479 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 20:35:31,479 : INFO : common : created directory at : artifacts]
+[2024-02-22 20:37:52,020 : INFO : common : json file saved at : scores.json]
+[2024-02-22 20:37:52,655 : ERROR : main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "main.py", line 44, in <module>
+    obj.main()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 57, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 131, in create_run
+    return self.store.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: ''
+[2024-02-22 20:44:00,788 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-22 20:44:00,791 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 20:44:00,793 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 20:44:00,793 : INFO : common : created directory at : artifacts]
+[2024-02-22 20:44:00,794 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-22 20:44:00,795 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-22 20:48:16,284 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-22 20:48:24,600 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-22 20:48:24,600 : INFO : main : ******************]
+[2024-02-22 20:48:24,601 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-22 20:48:24,602 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 20:48:24,604 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 20:48:24,605 : INFO : common : created directory at : artifacts]
+[2024-02-22 20:48:24,605 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-22 20:48:24,960 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-22 20:48:25,163 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-22 20:48:25,164 : INFO : main : **********************]
+[2024-02-22 20:48:25,164 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-22 20:48:25,166 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 20:48:25,168 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 20:48:25,168 : INFO : common : created directory at : artifacts]
+[2024-02-22 20:48:25,168 : INFO : common : created directory at : artifacts/training]
+[2024-02-22 21:04:13,080 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-22 21:04:13,081 : INFO : main : ******************]
+[2024-02-22 21:04:13,081 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 21:04:13,083 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 21:04:13,085 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 21:04:13,085 : INFO : common : created directory at : artifacts]
+[2024-02-22 21:06:32,202 : INFO : common : json file saved at : scores.json]
+[2024-02-22 21:06:33,447 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-22 21:06:33,995 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmpx_hr3sah\model\data\model\assets]
+[2024-02-22 21:06:39,910 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\145442fb65974776b0f27af96546db4e\artifacts\model\data]
+[2024-02-22 21:06:39,912 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\145442fb65974776b0f27af96546db4e\artifacts\model\data\model]
+[2024-02-22 21:06:39,913 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\145442fb65974776b0f27af96546db4e\artifacts\model\data\model\assets]
+[2024-02-22 21:06:39,919 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\145442fb65974776b0f27af96546db4e\artifacts\model\data\model\variables]
+[2024-02-22 21:06:40,034 : INFO : main : >>>>>>>>>>>>>> Stage Evaluation Stage completed <<<<<<<<<<<
+
+x========================x]
+[2024-02-22 21:43:52,652 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-22 21:43:52,668 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 21:43:52,668 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 21:43:52,668 : INFO : common : created directory at : artifacts]
+[2024-02-22 21:43:52,668 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-22 21:43:52,668 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-22 21:48:02,619 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-22 21:48:12,452 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-22 21:48:12,452 : INFO : main : ******************]
+[2024-02-22 21:48:12,452 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-22 21:48:12,452 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 21:48:12,452 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 21:48:12,452 : INFO : common : created directory at : artifacts]
+[2024-02-22 21:48:12,452 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-22 21:48:12,905 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-22 21:48:13,198 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-22 21:48:13,198 : INFO : main : **********************]
+[2024-02-22 21:48:13,198 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-22 21:48:13,198 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 21:48:13,198 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 21:48:13,198 : INFO : common : created directory at : artifacts]
+[2024-02-22 21:48:13,198 : INFO : common : created directory at : artifacts/training]
+[2024-02-22 21:55:56,814 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-22 21:55:56,814 : INFO : main : ******************]
+[2024-02-22 21:55:56,814 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 21:55:56,814 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 21:55:56,814 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 21:55:56,814 : INFO : common : created directory at : artifacts]
+[2024-02-22 21:58:36,156 : INFO : common : json file saved at : scores.json]
+[2024-02-22 21:58:36,964 : ERROR : main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "main.py", line 44, in <module>
+    obj.main()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "c:\savi msi\complete data science\kidney-disease-classification-deep-learning-project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 56, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 131, in create_run
+    return self.store.create_run(
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\Savi\.conda\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: ''
+[2024-02-22 23:11:51,860 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-22 23:11:51,876 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 23:11:51,876 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 23:11:51,876 : INFO : common : created directory at : artifacts]
+[2024-02-22 23:11:51,876 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-22 23:11:51,876 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-22 23:16:18,186 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-22 23:16:33,933 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-22 23:16:33,933 : INFO : main : ******************]
+[2024-02-22 23:16:33,933 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-22 23:16:33,933 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 23:16:33,933 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 23:16:33,945 : INFO : common : created directory at : artifacts]
+[2024-02-22 23:16:33,946 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-22 23:16:34,704 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-22 23:16:35,025 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-22 23:16:35,025 : INFO : main : **********************]
+[2024-02-22 23:16:35,027 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-22 23:16:35,029 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 23:16:35,029 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 23:16:35,029 : INFO : common : created directory at : artifacts]
+[2024-02-22 23:16:35,036 : INFO : common : created directory at : artifacts/training]
+[2024-02-22 23:27:40,976 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-22 23:27:41,834 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmp43ylxn04\model\data\model\assets]
+[2024-02-22 23:27:51,658 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\2228686d8e9c49408f2d06f2dce6b931\artifacts\model\data]
+[2024-02-22 23:27:51,658 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\2228686d8e9c49408f2d06f2dce6b931\artifacts\model\data\model]
+[2024-02-22 23:27:51,658 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\2228686d8e9c49408f2d06f2dce6b931\artifacts\model\data\model\assets]
+[2024-02-22 23:27:51,673 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\2228686d8e9c49408f2d06f2dce6b931\artifacts\model\data\model\variables]
+[2024-02-22 23:27:51,798 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\2228686d8e9c49408f2d06f2dce6b931\artifacts\tensorboard_logs\train]
+[2024-02-22 23:27:51,814 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\2228686d8e9c49408f2d06f2dce6b931\artifacts\tensorboard_logs\validation]
+[2024-02-22 23:27:51,892 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-22 23:27:51,892 : INFO : main : ******************]
+[2024-02-22 23:27:51,892 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-22 23:27:51,892 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 23:27:51,907 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 23:27:51,907 : INFO : common : created directory at : artifacts]
+[2024-02-22 23:31:10,176 : INFO : common : json file saved at : scores.json]
+[2024-02-22 23:31:11,261 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-22 23:31:11,831 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmp4netssa9\model\data\model\assets]
+[2024-02-22 23:31:17,859 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\20283688c8ee4c97899a7bbcbc3a146b\artifacts\model\data]
+[2024-02-22 23:31:17,859 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\20283688c8ee4c97899a7bbcbc3a146b\artifacts\model\data\model]
+[2024-02-22 23:31:17,867 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\20283688c8ee4c97899a7bbcbc3a146b\artifacts\model\data\model\assets]
+[2024-02-22 23:31:17,867 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\20283688c8ee4c97899a7bbcbc3a146b\artifacts\model\data\model\variables]
+[2024-02-22 23:31:17,964 : INFO : main : >>>>>>>>>>>>>> Stage Evaluation Stage completed <<<<<<<<<<<
+
+x========================x]
+[2024-02-22 23:47:52,342 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-22 23:47:52,342 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 23:47:52,342 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 23:47:52,342 : INFO : common : created directory at : artifacts]
+[2024-02-22 23:47:52,342 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-22 23:47:52,349 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-22 23:52:15,525 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-22 23:52:24,659 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-22 23:52:24,660 : INFO : main : ******************]
+[2024-02-22 23:52:24,660 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-22 23:52:24,662 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 23:52:24,665 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 23:52:24,665 : INFO : common : created directory at : artifacts]
+[2024-02-22 23:52:24,666 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-22 23:52:25,067 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-22 23:52:25,299 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-22 23:52:25,299 : INFO : main : **********************]
+[2024-02-22 23:52:25,301 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-22 23:52:25,302 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-22 23:52:25,304 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-22 23:52:25,305 : INFO : common : created directory at : artifacts]
+[2024-02-22 23:52:25,306 : INFO : common : created directory at : artifacts/training]
+[2024-02-23 00:06:08,021 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-23 00:06:08,522 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmp20qhz1z3\model\data\model\assets]
+[2024-02-23 00:06:14,409 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\a7adf950444f47dca89a372c9aabad47\artifacts\model\data]
+[2024-02-23 00:06:14,413 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\a7adf950444f47dca89a372c9aabad47\artifacts\model\data\model]
+[2024-02-23 00:06:14,414 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\a7adf950444f47dca89a372c9aabad47\artifacts\model\data\model\assets]
+[2024-02-23 00:06:14,420 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\a7adf950444f47dca89a372c9aabad47\artifacts\model\data\model\variables]
+[2024-02-23 00:06:14,524 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\a7adf950444f47dca89a372c9aabad47\artifacts\tensorboard_logs\train]
+[2024-02-23 00:06:14,531 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\a7adf950444f47dca89a372c9aabad47\artifacts\tensorboard_logs\validation]
+[2024-02-23 00:06:14,606 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-23 00:06:14,607 : INFO : main : ******************]
+[2024-02-23 00:06:14,607 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-23 00:06:14,609 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-23 00:06:14,611 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-23 00:06:14,612 : INFO : common : created directory at : artifacts]
+[2024-02-23 00:08:15,829 : INFO : common : json file saved at : scores.json]
+[2024-02-23 00:08:17,052 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-23 00:08:17,867 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmpeea8osom\model\data\model\assets]
+[2024-02-23 00:08:26,172 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\d716befe8783427290746636738cf029\artifacts\model\data]
+[2024-02-23 00:08:26,174 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\d716befe8783427290746636738cf029\artifacts\model\data\model]
+[2024-02-23 00:08:26,176 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\d716befe8783427290746636738cf029\artifacts\model\data\model\assets]
+[2024-02-23 00:08:26,181 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\d716befe8783427290746636738cf029\artifacts\model\data\model\variables]
+[2024-02-23 00:08:26,303 : INFO : main : >>>>>>>>>>>>>> Stage Evaluation Stage completed <<<<<<<<<<<
+
+x========================x]
+[2024-02-23 00:19:11,560 : INFO : main : >>>>> Stage Data ingestion stage started <<<<<<<]
+[2024-02-23 00:19:11,563 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-23 00:19:11,570 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-23 00:19:11,572 : INFO : common : created directory at : artifacts]
+[2024-02-23 00:19:11,573 : INFO : common : created directory at : artifcats/data_ingestion]
+[2024-02-23 00:19:11,574 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into artifacts/data_ingestion/data.zip folder]
+[2024-02-23 00:23:45,234 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1QQ-Fxrh3qmGSfbdlHSUQ0atLeoToHQLJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-23 00:23:55,550 : INFO : main : >>>>>> Stage Data ingestion stage completed <<<<<<
+
+x========================================x]
+[2024-02-23 00:23:55,550 : INFO : main : ******************]
+[2024-02-23 00:23:55,551 : INFO : main : >>>>>>>>> Stage Prepare Base Model started <<<<<<<<<<<]
+[2024-02-23 00:23:55,554 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-23 00:23:55,555 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-23 00:23:55,555 : INFO : common : created directory at : artifacts]
+[2024-02-23 00:23:55,555 : INFO : common : created directory at : artifacts/prepare_base_model]
+[2024-02-23 00:23:55,982 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-23 00:23:56,314 : INFO : main : >>>>>>>>>> Stage Prepare Base Model completed <<<<<<<<<<<<
+
+ x=============================x]
+[2024-02-23 00:23:56,314 : INFO : main : **********************]
+[2024-02-23 00:23:56,315 : INFO : main : >>>>>>>>>>>> Stage Training started <<<<<<<<<<<<<<<]
+[2024-02-23 00:23:56,317 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-23 00:23:56,318 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-23 00:23:56,319 : INFO : common : created directory at : artifacts]
+[2024-02-23 00:23:56,319 : INFO : common : created directory at : artifacts/training]
+[2024-02-23 00:44:27,731 : INFO : main : >>>>>>>>>>>>>>>> Stage Training completed <<<<<<<<<<<<<<<<
+
+x====================x]
+[2024-02-23 00:44:27,732 : INFO : main : ******************]
+[2024-02-23 00:44:27,732 : INFO : main : >>>>>>>>>>>>>>>>> Stage Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2024-02-23 00:44:27,734 : INFO : common : yaml file : config\config.yaml loaded successfully]
+[2024-02-23 00:44:27,735 : INFO : common : yaml file : params.yaml loaded successfully]
+[2024-02-23 00:44:27,736 : INFO : common : created directory at : artifacts]
+[2024-02-23 00:46:37,289 : INFO : common : json file saved at : scores.json]
+[2024-02-23 00:46:38,801 : WARNING : save : Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-02-23 00:46:39,496 : INFO : builder_impl : Assets written to: C:\Users\Savi\AppData\Local\Temp\tmp4u2xboba\model\data\model\assets]
+[2024-02-23 00:46:47,229 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\ccd83362ec52445892ac66334499cb6d\artifacts\model\data]
+[2024-02-23 00:46:47,232 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\ccd83362ec52445892ac66334499cb6d\artifacts\model\data\model]
+[2024-02-23 00:46:47,234 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\ccd83362ec52445892ac66334499cb6d\artifacts\model\data\model\assets]
+[2024-02-23 00:46:47,239 : INFO : dir_util : creating C:\SAVI MSI\Complete Data Science\kidney-disease-classification-deep-learning-project\mlruns\0\ccd83362ec52445892ac66334499cb6d\artifacts\model\data\model\variables]
+[2024-02-23 00:46:47,342 : INFO : main : >>>>>>>>>>>>>> Stage Evaluation Stage completed <<<<<<<<<<<
+
+x========================x]

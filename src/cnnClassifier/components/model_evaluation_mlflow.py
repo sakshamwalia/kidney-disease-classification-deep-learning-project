@@ -2,8 +2,8 @@ import tensorflow as tf
 from pathlib import Path
 import mlflow
 import mlflow.keras
+# mlflow.tensorflow.autolog()
 from urllib.parse import urlparse
-from keras.preprocessing.image import ImageDataGenerator
 from cnnClassifier.entity.config_entity import EvaluationConfig
 from cnnClassifier.utils.common import save_json
 
@@ -24,7 +24,7 @@ class Evaluation:
             interpolation='bilinear'
         )
         
-        valid_datagenerator = ImageDataGenerator(
+        valid_datagenerator = tf.keras.preprocessing.image.ImageDataGenerator(
             **datagenerator_kwargs
         )
         
@@ -49,7 +49,7 @@ class Evaluation:
     def save_score(self):
         scores = {"loss": self.score[0], "accuracy": self.score[1]}
         save_json(path=Path("scores.json"), data=scores)
-        
+    
     def log_into_mlflow(self):
         mlflow.set_registry_uri(self.config.mlflow_uri)
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
