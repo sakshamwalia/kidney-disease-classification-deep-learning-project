@@ -61,3 +61,17 @@ export MLFLOW_TRACKING_USERNAME=sakshamwalia
 
 export MLFLOW_TRACKING_PASSWORD=549c5cc4ae00fd52e55b92e68cec5dc45a19bc65
 ```
+
+### DVC==3.32.0
+1. Command 1:
+```bash
+dvc init
+```
+2. Command 2:
+```bash
+dvc repro
+```
+3. Command 3:
+```bash
+dvc dag
+```
