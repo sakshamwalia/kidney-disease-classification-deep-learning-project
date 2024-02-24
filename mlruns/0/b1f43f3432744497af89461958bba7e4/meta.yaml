@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/SAVI%20MSI/Complete%20Data%20Science/kidney-disease-classification-deep-learning-project/mlruns/0/b1f43f3432744497af89461958bba7e4/artifacts
+end_time: 1708771086123
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b1f43f3432744497af89461958bba7e4
+run_name: clumsy-whale-74
+run_uuid: b1f43f3432744497af89461958bba7e4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1708771078220
+status: 3
+tags: []
+user_id: Savi
