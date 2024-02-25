@@ -109,7 +109,7 @@ dvc dag
 
 ### 3. Create ECR repo to store/save docker image
 ```bash
-- Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/chicken
+- Save the URI: 730335464343.dkr.ecr.ap-southeast-2.amazonaws.com/kidney
 ```
 
 ### 4. Create EC2 machine (Ubuntu)
