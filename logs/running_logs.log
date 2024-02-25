@@ -1712,3 +1712,19 @@ x========================x]
 [2024-02-24 17:12:13,852 : INFO : _internal : [33mPress CTRL+C to quit[0m]
 [2024-02-24 17:12:16,396 : INFO : _internal : 127.0.0.1 - - [24/Feb/2024 17:12:16] "GET / HTTP/1.1" 200 -]
 [2024-02-24 17:12:27,982 : INFO : _internal : 127.0.0.1 - - [24/Feb/2024 17:12:27] "POST /predict HTTP/1.1" 200 -]
+[2024-02-24 17:58:46,316 : INFO : _internal : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.29.166:8080]
+[2024-02-24 17:58:46,317 : INFO : _internal : [33mPress CTRL+C to quit[0m]
+[2024-02-24 17:58:51,215 : INFO : _internal : 127.0.0.1 - - [24/Feb/2024 17:58:51] "GET / HTTP/1.1" 200 -]
+[2024-02-24 17:58:59,811 : INFO : _internal : 127.0.0.1 - - [24/Feb/2024 17:58:59] "POST /predict HTTP/1.1" 200 -]
+[2024-02-24 18:06:05,744 : INFO : _internal : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.29.166:8080]
+[2024-02-24 18:06:05,744 : INFO : _internal : [33mPress CTRL+C to quit[0m]
+[2024-02-24 18:06:09,434 : INFO : _internal : 127.0.0.1 - - [24/Feb/2024 18:06:09] "GET / HTTP/1.1" 200 -]
+[2024-02-24 18:06:18,355 : INFO : _internal : 127.0.0.1 - - [24/Feb/2024 18:06:18] "GET / HTTP/1.1" 200 -]
+[2024-02-24 18:07:10,023 : INFO : _internal : 127.0.0.1 - - [24/Feb/2024 18:07:10] "POST /predict HTTP/1.1" 200 -]
+[2024-02-24 18:07:33,391 : INFO : _internal : 127.0.0.1 - - [24/Feb/2024 18:07:33] "POST /predict HTTP/1.1" 200 -]
